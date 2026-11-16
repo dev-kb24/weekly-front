@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #FFFFFF;
+  --color-surface: #F7F7F7;
+  --color-border: #EBEBEB;
+  --color-text: #111111;
+  --color-text-muted: #999999;
+  --color-accent: #355847;
+  --color-accent-hover: #2a4538;
+  --color-success: #22C55E;
+  --color-error: #EF4444;
+  --color-warning: #F59E0B;
+
+  --font-sans: var(--font-bricolage);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+@layer utilities {
+  .form-label {
+    @apply text-[10px] font-bold uppercase tracking-widest text-[--color-text-muted];
+  }
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
